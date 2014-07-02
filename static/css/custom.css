@@ -1,3 +1,6 @@
 article iframe.FlattrButton {
     margin-top: 10px;
 }
+i.fa-stack-overflow:hover {
+    background-color: #FD8A07;
+}
