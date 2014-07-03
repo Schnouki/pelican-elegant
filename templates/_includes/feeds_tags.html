@@ -1,12 +1,16 @@
 {% if TAG_FEED_ATOM %}
     {% for tag in tags %}
+    {% if article is not defined or tag[0] in article.tags %}
     {% set tag_name = tag[0].slug %}
         <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag_name) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags|e }} - {{tag[0]}} Tag Atom Feed" />
+    {% endif %}
     {% endfor %}
 {% endif %}
 {% if TAG_FEED_RSS %}
     {% for tag in tags %}
+    {% if article is not defined or tag[0] in article.tags %}
     {% set tag_name = tag[0].slug %}
         <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag_name) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags|e }} - {{tag[0]}} Tag RSS Feed" />
+    {% endif %}
     {% endfor %}
 {% endif %}

@@ -20,6 +20,12 @@
 {{ smo_metadata(article) }}
 {% endblock meta_tags_in_head %}
 
+{% block feed_links %}
+{{ super() }}
+{% include '_includes/feeds_categories.html' %}
+{% include '_includes/feeds_tags.html' %}
+{% endblock feed_links %}
+
 {% block content %}
 <article>
 <div class="row-fluid">
