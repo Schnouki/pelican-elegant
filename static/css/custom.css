@@ -4,10 +4,10 @@ article iframe.FlattrButton {
 i.fa-stack-overflow:hover {
     background-color: #FD8A07;
 }
-.gist {
-    font-size: .85em;
-    line-height: 1.1em;
-}
 .gist table {
     table-layout: initial;
+}
+.gist .line, .gist .line-number {
+    font-size: 13px;
+    line-height: 20px;
 }
