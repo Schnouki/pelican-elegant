@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <meta charset="utf-8"> 
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% if article and article.author %}
@@ -53,6 +53,9 @@
         {% include '_includes/openid.html' %}
         {% import '_includes/flattr.html' as flattr with context %}
         {{ flattr.flattr_script() }}
+        {% if WOT_VERIFICATION -%}
+        <meta name="wot-verification" content="{{ WOT_VERIFICATION }}"/>
+        {% endif %}
     </head>
     <body>
         <div id="content-sans-footer">
