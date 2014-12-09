@@ -19,7 +19,7 @@
 {% endmacro %}
 
 {% macro flattr_button(article) %}
-{% if FLATTR_USER %}
+{% if FLATTR_USER and article.status != 'draft' %}
 <a class="FlattrButton" style="display:none;"
     title="{{ article.title|striptags|escape }}"
     data-flattr-uid="{{ FLATTR_USER }}"
