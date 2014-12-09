@@ -29,3 +29,11 @@ i.fa-stack-overflow:hover {
     width: 100%;
     height: 100%;
 }
+
+/* Emojis */
+img[src*="/emojis/"] {
+    border: 0;
+    padding: 0;
+    height: 1em;
+    vertical-align: baseline;
+}
