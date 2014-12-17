@@ -3,7 +3,7 @@
 <section>
     <h2>{{ RELATED_POSTS_LABEL }}</h2>
 <ul class="related-posts-list">
-{% for related_post in article.related_posts|sort(attribute = 'date') %}
+{% for related_post in article.related_posts %}
     {% set v_title = related_post.title|striptags %}
     {% set title = related_post.title|striptags|e %}
     {%if related_post.subtitle %}
@@ -16,4 +16,3 @@
 <hr />
 </section>
 {% endif %}
-
