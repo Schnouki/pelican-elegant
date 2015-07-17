@@ -102,7 +102,7 @@
             <ul class="list-of-tags tags-in-article">
                 {% for tag in article.tags|sort %}
                 <li><a href="{{ SITEURL }}/tags.html#{{ tag.slug }}-ref">{{ tag }}
-                    {% for aTag, tagged_articles in tags if aTag == tag %}
+                    {% for aTag, tagged_articles in tags if aTag.slug == tag.slug %}
                     <span>{{ tagged_articles|count }}</span>
                     {% endfor %}</a></li>
                 {% endfor %}
