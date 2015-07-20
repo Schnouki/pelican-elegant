@@ -63,4 +63,6 @@
     {% from '_includes/comments.html' import comments_script with context %}
     {{ comments_script(page) }}
   {% endif %}
+  {% from '_includes/embedly.html' import embedly_cards with context %}
+  {{ embedly_cards(page) }}
 {% endblock script %}

@@ -120,4 +120,6 @@
     {{ super() }}
     {% from '_includes/comments.html' import comments_script with context %}
     {{ comments_script(article) }}
+    {% from '_includes/embedly.html' import embedly_cards with context %}
+    {{ embedly_cards(article) }}
 {% endblock script %}
