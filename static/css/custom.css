@@ -37,3 +37,16 @@ img[src*="/emojis/"] {
     height: 1em;
     vertical-align: baseline;
 }
+
+/* Drafts */
+div.recent-posts article.draft::before {
+    content: "draft";
+    background: #cc0000;
+    border-radius: .3em;
+    color: white;
+    padding: .1em .5em;
+    font-variant: small-caps;
+    float: left;
+    transform: translate(0, .5em) rotate(-15deg);
+    margin-right: .5em
+}
