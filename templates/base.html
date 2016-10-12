@@ -26,7 +26,8 @@
         {% endif %}
         {% from '_includes/_defaults.html' import TWITTER_USERNAME with context %}
         {%if TWITTER_USERNAME %}
-        <meta name="twitter:creator" content="@{{TWITTER_USERNAME}}">
+        <meta name="twitter:site" content="@{{TWITTER_USERNAME}}"/>
+        <meta name="twitter:creator" content="@{{TWITTER_USERNAME}}"/>
         {% endif %}
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
